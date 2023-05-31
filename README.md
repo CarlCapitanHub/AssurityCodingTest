@@ -30,7 +30,7 @@ Targeting .NET Framework: **.NET 6.0** <br />
 1. Select the CategoryTest and right click Run. <br />
 ![image](https://github.com/CarlCapitanHub/AssurityCodingTest/assets/135119145/b8f44348-59e6-40ea-9f72-c7b7fdcf6097)
 
-2. Test should now run and results should be display in the **Test Detail Summary.** <br />
+2. Test should now run and results should be displayed in the **Test Detail Summary.** <br />
 ![image](https://github.com/CarlCapitanHub/AssurityCodingTest/assets/135119145/1688c224-8609-449f-a300-94f2296890d6)
 
 ## Libraries Utilized:
