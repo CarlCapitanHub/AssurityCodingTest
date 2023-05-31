@@ -1,6 +1,6 @@
 ﻿using Services.Models;
 
-namespace Models
+namespace Services
 {
     /// <summary>
     /// Category Service Class
@@ -25,7 +25,7 @@ namespace Models
         public CategoryModel GetCategoryById(string categoryId)
         {
             // Creating the Request
-            var request = new RestRequest($"{BaseUrl}/{categoryId}/Details.json?catalogue=false");
+            var request = new RestRequest($"{categoryId}/Details.json?catalogue=false");
 
             // Sending the Request and Getting a Response
             var response = Client.ExecuteGet(request);

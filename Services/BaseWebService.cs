@@ -1,4 +1,4 @@
-﻿namespace Models
+﻿namespace Services
 {
     /// <summary>
     /// Base Web Service Class
@@ -13,7 +13,8 @@
         public BaseWebService(string baseUrl)
         {
             var options = new RestClientOptions(baseUrl);
-            BaseUrl = baseUrl;
+
+            // Initiliaze the http client instance with the specified base url and options
             Client = new RestClient(options, useClientFactory:true);
         }
 
@@ -21,11 +22,6 @@
         /// Gets or Sets the Web Service Client
         /// </summary>
         protected RestClient Client { get; set; }
-
-        /// <summary>
-        /// Gets or Sets the BaseURL
-        /// </summary>
-        protected string BaseUrl { get; set; }
 
         /// <summary>
         /// Gets or Sets the HttpStatusCode of a current response

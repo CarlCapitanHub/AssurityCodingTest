@@ -1,4 +1,4 @@
-using Models;
+using Services;
 using Services.Models;
 using Tests.TestData;
 
@@ -16,7 +16,7 @@ namespace SampleAPIAutomationTest
         public void TestInitialize()
         {
             // Initialize the object for CategoryService with the Base URL endpoint
-            categoryService = new CategoryService($"https://api.tmsandbox.co.nz/v1/Categories");
+            categoryService = new CategoryService($"https://api.tmsandbox.co.nz/v1/Categories/");
         }
 
         /// <summary>

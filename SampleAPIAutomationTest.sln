@@ -5,7 +5,7 @@ VisualStudioVersion = 17.6.33717.318
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tests", "..\AssurityCodingTest\Tests\Tests.csproj", "{A5F75D91-A905-4EF2-A42A-328DEFA8C9A9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Services", "..\AssurityCodingTest\Models\Services.csproj", "{82BFFD34-B9F5-49D0-90C8-A160486F818A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Services", "..\AssurityCodingTest\Services\Services.csproj", "{82BFFD34-B9F5-49D0-90C8-A160486F818A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
