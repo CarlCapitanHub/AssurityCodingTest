@@ -38,6 +38,7 @@ Targeting .NET Framework: **.NET 6.0** <br />
 #### Test Framework .NET: **MS Test**
 
 ## Execution via GitHub Workflows
+### Pre-requisite: Must be added as a Collaborator in the Repository.
 You can also execute the test by manually triggering the github workflow setup.
 
 1. In the GitHub Repo, click on Actions.
