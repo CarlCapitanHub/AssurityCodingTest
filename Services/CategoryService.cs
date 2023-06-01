@@ -7,7 +7,7 @@ namespace Services
     /// </summary>
     public class CategoryService : BaseWebService
     {
-
+        #region Implementation
         /// <summary>
         /// Initialize a new instance of the <see cref="CategoryService" /> class.
         /// </summary>
@@ -16,30 +16,13 @@ namespace Services
         {
 
         }
+        #endregion
 
-        /// <summary>
-        /// Gets the Category details of the specified ID.
-        /// </summary>
-        /// <param name="categoryId">Category ID to get details of.</param>
-        /// <returns></returns>
-        public CategoryModel GetCategoryById(string categoryId)
-        {
-            // Creating the Request
-            var request = new RestRequest($"{categoryId}/Details.json?catalogue=false");
+        #region Properties
 
-            // Sending the Request and Getting a Response
-            var response = Client.ExecuteGet(request);
+        #endregion
 
-            // Checking if Content is not null
-            string content = response.Content ?? string.Empty;
-
-            // Assigning Response Status Code to CurrentResponseStatusCode property for Status Code validation
-            CurrentResponseStatusCode = response.StatusCode;
-
-            // Returning the content in a Category Model instance
-            return JsonSerializer.Deserialize<CategoryModel>(content)!;
-        }
-
+        #region Methods
         /// <summary>
         /// Finds the Promotion with the specified name and description in the given array of Promotions.
         /// </summary>
@@ -64,5 +47,6 @@ namespace Services
             // Returns null if the specific promotion is not found
             return null;
         }
+        #endregion
     }
 }

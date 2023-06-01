@@ -1,3 +1,4 @@
+using RestSharp;
 using Services;
 using Services.Models;
 using Tests.TestData;
@@ -25,15 +26,22 @@ namespace SampleAPIAutomationTest
         [TestMethod]
         public void CategoryTest()
         {
-            // Get the Category Details of the specified Category Id
-            CategoryModel? category = categoryService?.GetCategoryById(CategoryData.CategoryId);
+            // Create the Get Request
+            RestRequest request = new RestRequest($"{CategoryData.CategoryId}/Details.json?catalogue=false");
+
+            // Send the Get Request
+            RestResponse? response = categoryService?.ExecuteGetMethod(request);
+
+            // Deserialize the Content into an object instance
+            string content = response?.Content ?? string.Empty;
+            CategoryModel? category = categoryService?.DeserializeContent<CategoryModel>(content);
 
             // Find the Promotion Details in the Category with the specified name and description
             Promotion[]? promotions = category?.Promotions ?? Array.Empty<Promotion>();
             Promotion? promotion = categoryService?.FindPromotion(promotions, CategoryData.PromotionName, CategoryData.PromotionDescription) ?? null;
 
             // Verify Status Code is OK
-            Assert.AreEqual(HttpStatusCode.OK, categoryService?.CurrentResponseStatusCode, $"Failed - Status Code is Expected: {HttpStatusCode.OK} but Actual: {categoryService?.CurrentResponseStatusCode}");
+            Assert.AreEqual(HttpStatusCode.OK, response?.StatusCode, $"Failed - Status Code is Expected: {HttpStatusCode.OK} but Actual: {response?.StatusCode}");
 
             // Validate Category Name is as expected
             Assert.AreEqual(CategoryData.Name, category?.Name, $"Failed - Name is Expected: {CategoryData.Name} but Actual: {category?.Name}");
