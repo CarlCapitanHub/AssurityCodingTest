@@ -30,11 +30,37 @@ Targeting .NET Framework: **.NET 6.0** <br />
 1. Select the CategoryTest and right click Run. <br />
 ![image](https://github.com/CarlCapitanHub/AssurityCodingTest/assets/135119145/b8f44348-59e6-40ea-9f72-c7b7fdcf6097)
 
-2. Test should now run and results should be display in the **Test Detail Summary.** <br />
+2. Test should now run and results should be displayed in the **Test Detail Summary.** <br />
 ![image](https://github.com/CarlCapitanHub/AssurityCodingTest/assets/135119145/1688c224-8609-449f-a300-94f2296890d6)
 
 ## Libraries Utilized:
 #### Http Client Library .NET: **RestSharp**
 #### Test Framework .NET: **MS Test**
+
+## Execution via GitHub Workflows
+### Pre-requisite: Must be added as a Collaborator in the Repository.
+You can also execute the test by manually triggering the github workflow setup.
+
+1. In the GitHub Repo, click on Actions.
+2. Under All Workflows, select the **Second .NET Option.** <br />
+![image](https://github.com/CarlCapitanHub/AssurityCodingTest/assets/135119145/94633338-ad80-414c-96b6-50283ae1b45e)
+
+3. Click on Run Workflow.
+4. Leave the default values for Branch and Log Level.
+5. Choose **Test Environment** as the Environment. <br />
+![image](https://github.com/CarlCapitanHub/AssurityCodingTest/assets/135119145/63f6f0ad-2649-42bc-84eb-d15e1f8ad812)
+
+6. Click Run Workflow. The manually triggered workflow must now be in queue.
+
+### Viewing the Test Result
+1. Once the build is complete, click on the workflow executed. <br />
+![image](https://github.com/CarlCapitanHub/AssurityCodingTest/assets/135119145/0c15b480-da52-40db-87ac-8d8c696049f8)
+
+2. Click on Build. <br />
+![image](https://github.com/CarlCapitanHub/AssurityCodingTest/assets/135119145/c1c7499d-9200-4cdc-8aa7-48fd1e375cef)
+
+3. You can now view the logs of build. Expand the Test Part of the Log. <br />
+![image](https://github.com/CarlCapitanHub/AssurityCodingTest/assets/135119145/d2570e5e-dbcc-4ba2-9e34-8fdad54ed200)
+
 
 ## Author: **Carl Jan Capitan**
